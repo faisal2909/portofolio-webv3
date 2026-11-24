@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+    /* warna */
+    --color-ink: #0f1420;
+    --color-surface: #171d2e;
+    --color-surface-hover: #1f2740;
+    --color-border: #2a3350;
+    --color-text: #e8e6de;
+    --color-text-muted: #8b92a6;
+    --color-amber: #e3b341;
+    --color-teal: #5eead4;
+
+    /* Tipografi */
+    --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-body: "Inter", ui-sans-serif, sans-serif;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-ink);
+        color: var(--color-text);
+        font-family: var(--font-body);
+    }
+
+    ::selection {
+        background-color: var(--color-amber);
+        color: var(--color-ink);
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--color-teal);
+        outline-offset: 2px;
+    }
+}
+
+@layer utilities {
+
+    /* Menghormati preferensi pengguna yang sensitif terhadap animasi */
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
