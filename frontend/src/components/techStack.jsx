@@ -10,6 +10,10 @@ const techStack = [
     { name: "PostgreSql", icon: "https://cdn.simpleicons.org/postgresql/4169E1" },
     { name: "MySQL", icon: "https://cdn.simpleicons.org/mysql/4479A1" },
     { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2D3748" },
+    { name: "Svelte", icon: "https://cdn.simpleicons.org/svelte" },
+    { name: "Python", icon: "https://cdn.simpleicons.org/python" },
+    { name: "Typescript", icon: "https://cdn.simpleicons.org/typescript" },
+    { name: "EJS", icon: "https://cdn.simpleicons.org/ejs" }
 ]
 
 const container = {
